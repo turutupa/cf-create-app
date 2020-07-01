@@ -1,5 +1,5 @@
-<div align="center" style="border:1px solid">
-  <h2 align="center">cf-create-app</h2>
+<div align="center">
+  <h1 align="center">cf-create-app</h1>
   <p align="center">
     <a href="https://github.com/Turutupa/cf-create-app"><strong>Explore the docs »</strong></a>
     <br />
