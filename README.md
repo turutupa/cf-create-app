@@ -96,10 +96,10 @@ In your CF account space, the following services must be available:
 
 ### Recommended tools
 
-| Tools                                       | Description                                                                            | Documentation                                                                                                  |
-| ------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| VS Code CDS extension                       | VS Code extension with code complete and other tools for CDS development               | https://tools.hana.ondemand.com/#cloud-vscodecds                                                               |
-| MTA Plugin for CF CLI                       | Plugin to add useful commands to manage MTA applications using CF CLI                  | https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/e93b231895b64cbc9221a62953563a6f.html |
+| Tools |  Description | Documentation |
+| ----- | ------------ | ------------- |
+| VS Code CDS extension | VS Code extension with code complete and other tools for CDS development | https://tools.hana.ondemand.com/#cloud-vscodecds |
+| MTA Plugin for CF CLI | Plugin to add useful commands to manage MTA applications using CF CLI | https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/e93b231895b64cbc9221a62953563a6f.html |
 | HTML5 Applications Repository CF CLI Plugin | Plugin to add useful commands to manage HTML5 Application Repository apps using CF CLI | https://github.com/SAP/cf-html5-apps-repo-cli-plugin                                                           |
 
 <!-- USAGE EXAMPLES -->
