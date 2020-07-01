@@ -79,10 +79,10 @@ npm config set @sap:registry https://npm.sap.com/
 
 | Pre-requisite | Description                                                            | Documentation                                            |
 | ------------- | ---------------------------------------------------------------------- | -------------------------------------------------------- |
-| Node.js v12   | Required runtime for this boilerplate. Recommended install it with NVM | https://nodejs.org/en/download/package-manager/          |
-| cds cli       | CLI for cds and CAP development <br> `npm i -g @sap/cds-dk`            | https://cap.cloud.sap/docs/about/#development-tools      |
-| mbt cli       | CLI tool for MTA build process <br> `install -g mbt`                   | https://sap.github.io/cloud-mta-build-tool/download/     |
-| cf cli        | Cloud Foundy CLI tool                                                  | https://docs.cloudfoundry.org/cf-cli/install-go-cli.html |
+| Node.js v12   | Required runtime for this boilerplate. Recommended install it with NVM | [Download][nodejs-documentation]
+| cds cli | CLI for cds and CAP development <br> `npm i -g @sap/cds-dk` | [Download][cds-cli-download]      |
+| mbt cli | CLI tool for MTA build process <br> `install -g mbt` | [Download][mbt-cli-download] |
+| cf cli | Cloud Foundy CLI tool | [Download][cf-cli-download] |
 
 ### Cloud prerequisites
 
@@ -98,9 +98,9 @@ In your CF account space, the following services must be available:
 
 | Tools |  Description | Documentation |
 | ----- | ------------ | ------------- |
-| VS Code CDS extension | VS Code extension with code complete and other tools for CDS development | https://tools.hana.ondemand.com/#cloud-vscodecds |
-| MTA Plugin for CF CLI | Plugin to add useful commands to manage MTA applications using CF CLI | https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/e93b231895b64cbc9221a62953563a6f.html |
-| HTML5 Applications Repository CF CLI Plugin | Plugin to add useful commands to manage HTML5 Application Repository apps using CF CLI | https://github.com/SAP/cf-html5-apps-repo-cli-plugin                                                           |
+| VS Code CDS extension | VS Code extension with code complete and other tools for CDS development | [Download][vscode-ext-download] |
+| MTA Plugin for CF CLI | Plugin to add useful commands to manage MTA applications using CF CLI | [Download][mta-cf-plugin-download] |
+| HTML5 Applications Repository CF CLI Plugin | Plugin to add useful commands to manage HTML5 Application Repository apps using CF CLI | [Download][html5-repo-cf-plugin] |
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -199,6 +199,13 @@ Project Link: [https://github.com/Turutupa/cf-create-app](https://github.com/Tur
 [linkedin-url-rafa]: https://www.linkedin.com/in/rafaellopezmartinez/
 [linkedin-url-sergio]: https://www.linkedin.com/in/sergio-delgado-98b66ba0/
 
+[nodejs-documentation]: https://nodejs.org/en/download/package-manager/
+[cds-cli-download]: https://cap.cloud.sap/docs/about/#development-tools
+[mbt-cli-download]: https://sap.github.io/cloud-mta-build-tool/download/
+[cf-cli-download]: https://docs.cloudfoundry.org/cf-cli/install-go-cli.html
+[vscode-ext-download]: https://tools.hana.ondemand.com/#cloud-vscodecds
+[mta-cf-plugin-download]: https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/e93b231895b64cbc9221a62953563a6f.html
+[html5-repo-cf-plugin]: https://github.com/SAP/cf-html5-apps-repo-cli-plugin
 [cap-documentation]: https://cap.cloud.sap/docs/
 [app-router-documentation]: https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/01c5f9ba7d6847aaaf069d153b981b51.html
 [mta-documentation]: https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/d04fc0e2ad894545aebfd7126384307c.html
