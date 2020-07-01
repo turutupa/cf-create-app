@@ -56,7 +56,7 @@ cf-create-app uses the following technologies and frameworks:
 - [SAP Cloud Application Programming Model (CAP)][cap-documentation]
 - [SAP Application Router][app-router-documentation]
 - [Multi Target Applications (MTA)][mta-documentation]
-- [SAP HTML5 Application Repository][HTM5-app-repo-documentation]
+- [SAP HTML5 Application Repository][html5-app-repo-documentation]
 - [SAP XSUAA service][xsuaa-documentation]
 - Any HTML5 application frameworks (e.g. ReactJS, SAP UI5, VueJS, ...)
 
