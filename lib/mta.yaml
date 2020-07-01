@@ -1,0 +1,125 @@
+## Generated mta.yaml based on template version 0.2.0
+## appName = cap-boilerplate-documentation-test
+## language=nodejs; multiTenant=false
+## approuter=
+_schema-version: '3.1'
+ID: cap-boilerplate
+version: 1.0.0
+description: 'A simple CAP project.'
+parameters:
+  enable-parallel-deployments: true
+  deploy_mode: html5-repo
+
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm install
+        - npx cds build
+        - npm --prefix ./app install ./app
+        - npm run build --prefix ./app
+
+modules:
+  # --------------------- SERVER MODULE ------------------------
+  - name: cap-boilerplate-srv
+    # ------------------------------------------------------------
+    type: nodejs
+    path: gen/srv
+    properties:
+      EXIT: 1 # required by deploy.js task to terminate
+    requires:
+      # Resources extracted from CAP configuration
+      - name: cap-boilerplate-hdi
+    provides:
+      - name: srv-binding # required by consumers of CAP services (e.g. approuter)
+        properties:
+          srv-url: ${default-url}
+
+  # -------------------- SIDECAR MODULE ------------------------
+  - name: cap-boilerplate-db
+    # ------------------------------------------------------------
+    type: hdb
+    path: gen/db
+    parameters:
+      app-name: cap-boilerplate-hdi
+    requires:
+      # 'hana' and 'xsuaa' resources extracted from CAP configuration
+      - name: cap-boilerplate-hdi
+
+  # --------------------- HTML5DEPLOYER MODULE -----------------
+  - name: cap-boilerplate-hmtl5-deployer
+    # ------------------------------------------------------------
+    type: com.sap.html5.application-content
+    path: html5Deployer
+    requires:
+      - name: cap-boilerplate-html5-host
+    build-parameters:
+      requires:
+        - name: cap-boilerplate-app
+          artifacts:
+            - './*'
+          target-path: resources/app
+
+  # --------------------- REACT APP MODULE ---------------------
+  - name: cap-boilerplate-app
+    # ------------------------------------------------------------
+    type: html5
+    path: app
+    build-parameters:
+      supported-platforms: []
+      build-result: build
+
+  # --------------------- APPROUTER MODULE ---------------------
+  - name: cap-boilerplate-approuter
+    # ------------------------------------------------------------
+    type: approuter.nodejs
+    path: approuter
+    requires:
+      - name: cap-boilerplate-html5-runtime
+      - name: cap-boilerplate-xsuaa
+      - name: srv-binding
+        group: destinations
+        properties:
+          name: srv-binding
+          url: ~{srv-url}
+          forwardAuthToken: true
+
+resources:
+  # services extracted from CAP configuration
+  # 'service-plan' can be configured via 'cds.requires.<name>.vcap.plan'
+  # ------------------------------------------------------------
+  - name: cap-boilerplate-hdi
+    # ------------------------------------------------------------
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana # or 'hanatrial' on trial landscapes
+      service-plan: hdi-shared
+    properties:
+      hdi-service-name: ${service-name}
+
+  # --------------------- HTML5 Runtime ----------------------
+  - name: cap-boilerplate-html5-runtime
+    # ------------------------------------------------------------
+    parameters:
+      service-name: cap-boilerplate-html5-runtime
+      service-plan: app-runtime
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+
+  # --------------------- HTML5 Host -------------------------
+  - name: cap-boilerplate-html5-host
+    # ------------------------------------------------------------
+    parameters:
+      service-name: cap-boilerplate-html5-host
+      service-plan: app-host
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+
+  # --------------------- XSUAA Service ---------------------
+  - name: cap-boilerplate-xsuaa
+    # ------------------------------------------------------------
+    parameters:
+      path: ./xs-security.json
+      service-plan: application
+      service: xsuaa
+    type: org.cloudfoundry.managed-service

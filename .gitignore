@@ -1,0 +1,32 @@
+# CAP cap-boilerplate
+_out
+*.db
+connection.properties
+default-*.json
+gen/
+node_modules/
+package-lock.json
+target/
+html5Deployer/resources
+
+# Web IDE, App Studio
+.che/
+.gen/
+
+# MTA
+*_mta_build_tmp
+*.mtar
+mta_archives/
+Makefile*.mta
+
+# Other
+.DS_Store
+*.orig
+*.log
+
+*.iml
+*.flattened-pom.xml
+
+# IDEs
+.vscode
+.idea
