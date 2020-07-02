@@ -5,9 +5,9 @@
     "cf-create-app": "./bin/index.js"
   },
   "preferGlobal": true,
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple boilerplate to run with CAP + AppRouter + HTML5 Repo Service ...",
-  "repository": "<Add your repository here>",
+  "repository": "https://github.com/turutupa/cf-create-app",
   "license": "MIT",
   "scripts": {
     "setup": "node index"
