@@ -18,7 +18,7 @@ function init() {
     return;
   }
 
-  // cfCreateApp();
+  cfCreateApp();
 }
 
 init();
