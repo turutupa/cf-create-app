@@ -74,13 +74,12 @@ This tool creates a project with all the components you need to build (and easil
 This project requires several `@sap` npm dependencies. Make sure you configure your npm registry to pull this dependencies form the SAP NPM repository:
 
 ```
-npm config set @sap:registry https://npm.sap.com/
+  It is not required anymore to have @sap npm registry set
 ```
 
 | Pre-requisite | Description                                                            | Documentation                                            |
 | ------------- | ---------------------------------------------------------------------- | -------------------------------------------------------- |
-| Node.js v12   | Required runtime for this boilerplate. Recommended install it with NVM | [Download][nodejs-documentation]
-| cds cli | CLI for cds and CAP development <br> `npm i -g @sap/cds-dk` | [Download][cds-cli-download]      |
+| Node.js v12   | Required runtime for this boilerplate. Recommended install it with NVM | [Download][nodejs-documentation] | 
 | mbt cli | CLI tool for MTA build process <br> `install -g mbt` | [Download][mbt-cli-download] |
 | cf cli | Cloud Foundy CLI tool | [Download][cf-cli-download] |
 
