@@ -1,9 +1,16 @@
-using { bookshop as bookshop } from '../db/schema';
-service BookshopService @(path:'/browse') {
+using {bookshop as bookshop} from '../db/schema';
 
-  @readonly entity Books as SELECT from bookshop.Books {*,
-    author.name as author
-  } excluding { createdBy, modifiedBy };
+service BookshopService @(path : '/browse') {
 
-  action submitOrder (book : Books.ID, amount: Integer);
+  @readonly
+  entity Books as
+    select from bookshop.Books {
+      *,
+      author.name as author
+    }
+    excluding {
+      createdBy,
+      modifiedBy
+    };
+
 }
