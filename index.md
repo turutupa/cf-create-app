@@ -210,5 +210,5 @@ Project Link: [https://github.com/Turutupa/cf-create-app](https://github.com/Tur
 [mta-documentation]: https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/d04fc0e2ad894545aebfd7126384307c.html
 [html5-app-repo-documentation]: https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/f8520f572a6445a7bfaff4a1bbcbe60a.html
 [xsuaa-documentation]: https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/28eb34a6eda740a395ff6b0496f3bffb.html
-[localhost-dev-documentation]: https://github.com/Turutupa/cf-create-app/blob/master/documents/LocalhostDevelopment.md
-[step-by-step-documentation]: https://github.com/Turutupa/cf-create-app/blob/master/documents/ManualConfig.md
+[localhost-dev-documentation]: https://github.com/Turutupa/cf-create-app/blob/gh-pages/LocalhostDevelopment.md
+[step-by-step-documentation]: https://github.com/Turutupa/cf-create-app/blob/gh-pages/ManualConfig.md
