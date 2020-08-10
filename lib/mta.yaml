@@ -15,7 +15,7 @@ build-parameters:
     - builder: custom
       commands:
         - npm install
-        - npx cds build
+        - npx @sap/cds-dk build
         - npm --prefix ./app install ./app
         - npm run build --prefix ./app
 
@@ -60,14 +60,14 @@ modules:
             - './*'
           target-path: resources/app
 
-  # --------------------- REACT APP MODULE ---------------------
+  # --------------------- FRONTEND APP MODULE ---------------------
   - name: cap-boilerplate-app
     # ------------------------------------------------------------
     type: html5
     path: app
     build-parameters:
       supported-platforms: []
-      build-result: build
+      build-result: build-folder
 
   # --------------------- APPROUTER MODULE ---------------------
   - name: cap-boilerplate-approuter
@@ -113,6 +113,8 @@ resources:
       service-name: cap-boilerplate-html5-host
       service-plan: app-host
       service: html5-apps-repo
+      config:
+        sizeLimit: 2
     type: org.cloudfoundry.managed-service
 
   # --------------------- XSUAA Service ---------------------
