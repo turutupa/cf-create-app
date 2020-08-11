@@ -42,7 +42,7 @@ This project is meant to simplify the initial configuration needed to create and
 What cf-create-app does for you?
 
 1. Creates a basic CAP application
-2. Adds a simple React application to your project
+2. Adds a simple React, Angular or Vue application to your project
 3. Adds an HTML5 Deployer to the project
 4. Adds an Application Router to the project
 5. Adds the HTML5 Application Repository service (app-host and app-runtime) to the project
@@ -58,7 +58,7 @@ cf-create-app uses the following technologies and frameworks:
 - [Multi Target Applications (MTA)][mta-documentation]
 - [SAP HTML5 Application Repository][html5-app-repo-documentation]
 - [SAP XSUAA service][xsuaa-documentation]
-- Any HTML5 application frameworks (e.g. ReactJS, SAP UI5, VueJS, ...)
+- Any HTML5 application frameworks (e.g. ReactJS, Angular, VueJS, SAP UI5, ...)
 
 <!-- GETTING STARTED -->
 
@@ -69,12 +69,6 @@ Setting and end-to-end application in SAP Cloud Platform is not a trivial task.
 This tool creates a project with all the components you need to build (and easily deploy) a web application with a CAP backend exposing OData services, and an HTML5 application ready to consume those services.
 
 ### Prerequisites
-
-This project requires several `@sap` npm dependencies. Make sure you configure your npm registry to pull this dependencies form the SAP NPM repository:
-
-```
-  It is not required anymore to have @sap npm registry set
-```
 
 | Pre-requisite | Description                                                            | Documentation                    |
 | ------------- | ---------------------------------------------------------------------- | -------------------------------- |
@@ -110,6 +104,9 @@ Open a terminal in your workspace directory and run:
 ```sh
 npx cf-create-app YOUR_APP_NAME
 ```
+In the comand prompt, choose the frontend framework you prefer:
+
+![UI framework command prompt][UI-framework-command-prompt]
 
 The new project contains these folders and files, following the recommended project layout:
 
@@ -216,3 +213,4 @@ Project Link: [https://github.com/Turutupa/cf-create-app](https://github.com/Tur
 [xsuaa-documentation]: https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/28eb34a6eda740a395ff6b0496f3bffb.html
 [localhost-dev-documentation]: https://github.com/Turutupa/cf-create-app/blob/master/documents/LocalhostDevelopment.md
 [step-by-step-documentation]: https://github.com/Turutupa/cf-create-app/blob/master/documents/ManualConfig.md
+[UI-framework-command-prompt]: https://i.imgur.com/fo6K4TV.jpg
