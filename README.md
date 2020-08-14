@@ -1,3 +1,5 @@
+![Header Image][header-image]
+
 <div align="center">
   <h1 align="center">cf-create-app</h1>
   <p align="center">
@@ -104,9 +106,10 @@ Open a terminal in your workspace directory and run:
 ```sh
 npx cf-create-app YOUR_APP_NAME
 ```
+
 In the comand prompt, choose the frontend framework you prefer:
 
-![UI framework command prompt][UI-framework-command-prompt]
+![UI framework command prompt][ui-framework-command-prompt]
 
 The new project contains these folders and files, following the recommended project layout:
 
@@ -213,4 +216,5 @@ Project Link: [https://github.com/Turutupa/cf-create-app](https://github.com/Tur
 [xsuaa-documentation]: https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/28eb34a6eda740a395ff6b0496f3bffb.html
 [localhost-dev-documentation]: https://github.com/Turutupa/cf-create-app/blob/master/documents/LocalhostDevelopment.md
 [step-by-step-documentation]: https://github.com/Turutupa/cf-create-app/blob/master/documents/ManualConfig.md
-[UI-framework-command-prompt]: https://i.imgur.com/fo6K4TV.jpg
+[ui-framework-command-prompt]: https://i.imgur.com/fo6K4TV.jpg
+[header-image]: https://github.com/Turutupa/cf-create-app/blob/master/logos.png?raw=true
