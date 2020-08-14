@@ -106,6 +106,9 @@ Open a terminal in your workspace directory and run:
 ```sh
 npx cf-create-app YOUR_APP_NAME
 ```
+In the comand prompt, choose the frontend framework you prefer:
+
+![UI framework command prompt][UI-framework-command-prompt]
 
 In the comand prompt, choose the frontend framework you prefer:
 
