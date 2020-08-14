@@ -13,29 +13,28 @@
 </div>
 <br />
 
-
 <!-- TABLE OF CONTENTS -->
+
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Cloud prerequisites](#cloud-prerequisites)
-  * [Recommended tools](#recommended-tools)
-* [Usage](#usage)
-  * [Create your app](#create-your-app)
-  * [Add your business logic](#add-your-business-logic)
-  * [Deploy the app](#deploy-the-app)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
-
-
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Cloud prerequisites](#cloud-prerequisites)
+  - [Recommended tools](#recommended-tools)
+- [Usage](#usage)
+  - [Create your app](#create-your-app)
+  - [Add your business logic](#add-your-business-logic)
+  - [Deploy the app](#deploy-the-app)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 This project is meant to simplify the initial configuration needed to create and deploy an end-to-end application to a Cloud Foundry account in SAP Cloud Platform.
@@ -43,7 +42,7 @@ This project is meant to simplify the initial configuration needed to create and
 What cf-create-app does for you?
 
 1. Creates a basic CAP application
-2. Adds a simple React application to your project
+2. Adds a simple React, Angular or Vue application to your project
 3. Adds an HTML5 Deployer to the project
 4. Adds an Application Router to the project
 5. Adds the HTML5 Application Repository service (app-host and app-runtime) to the project
@@ -51,6 +50,7 @@ What cf-create-app does for you?
 7. Bind all modules together as a MTA application, ready to be deployed in a Cloud Foundry environment
 
 ### Built With
+
 cf-create-app uses the following technologies and frameworks:
 
 - [SAP Cloud Application Programming Model (CAP)][cap-documentation]
@@ -58,30 +58,22 @@ cf-create-app uses the following technologies and frameworks:
 - [Multi Target Applications (MTA)][mta-documentation]
 - [SAP HTML5 Application Repository][html5-app-repo-documentation]
 - [SAP XSUAA service][xsuaa-documentation]
-- Any HTML5 application frameworks (e.g. ReactJS, SAP UI5, VueJS, ...)
-
-
+- Any HTML5 application frameworks (e.g. ReactJS, Angular, VueJS, SAP UI5, ...)
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
-Setting and end-to-end application in SAP Cloud Platform is not a trivial task. 
+Setting and end-to-end application in SAP Cloud Platform is not a trivial task.
 
 This tool creates a project with all the components you need to build (and easily deploy) a web application with a CAP backend exposing OData services, and an HTML5 application ready to consume those services.
 
 ### Prerequisites
 
-This project requires several `@sap` npm dependencies. Make sure you configure your npm registry to pull this dependencies form the SAP NPM repository:
-
-```
-  It is not required anymore to have @sap npm registry set
-```
-
-| Pre-requisite | Description                                                            | Documentation                                            |
-| ------------- | ---------------------------------------------------------------------- | -------------------------------------------------------- |
-| Node.js v12   | Required runtime for this boilerplate. Recommended install it with NVM | [Download][nodejs-documentation] | 
-| mbt cli | CLI tool for MTA build process <br> `install -g mbt` | [Download][mbt-cli-download] |
-| cf cli | Cloud Foundy CLI tool | [Download][cf-cli-download] |
+| Pre-requisite | Description                                                            | Documentation                    |
+| ------------- | ---------------------------------------------------------------------- | -------------------------------- |
+| Node.js v12   | Required runtime for this boilerplate. Recommended install it with NVM | [Download][nodejs-documentation] |
+| cf cli        | Cloud Foundy CLI tool                                                  | [Download][cf-cli-download]      |
 
 ### Cloud prerequisites
 
@@ -95,32 +87,38 @@ In your CF account space, the following services must be available:
 
 ### Recommended tools
 
-| Tools |  Description | Documentation |
-| ----- | ------------ | ------------- |
-| VS Code CDS extension | VS Code extension with code complete and other tools for CDS development | [Download][vscode-ext-download] |
-| MTA Plugin for CF CLI | Plugin to add useful commands to manage MTA applications using CF CLI | [Download][mta-cf-plugin-download] |
-| HTML5 Applications Repository CF CLI Plugin | Plugin to add useful commands to manage HTML5 Application Repository apps using CF CLI | [Download][html5-repo-cf-plugin] |
+| Tools                                       | Description                                                                            | Documentation                      |
+| ------------------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------- |
+| VS Code CDS extension                       | VS Code extension with code complete and other tools for CDS development               | [Download][vscode-ext-download]    |
+| MTA Plugin for CF CLI                       | Plugin to add useful commands to manage MTA applications using CF CLI                  | [Download][mta-cf-plugin-download] |
+| HTML5 Applications Repository CF CLI Plugin | Plugin to add useful commands to manage HTML5 Application Repository apps using CF CLI | [Download][html5-repo-cf-plugin]   |
 
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
 ### Create your app
+
 Open a terminal in your workspace directory and run:
+
 ```sh
 npx cf-create-app YOUR_APP_NAME
 ```
+In the comand prompt, choose the frontend framework you prefer:
+
+![UI framework command prompt][UI-framework-command-prompt]
 
 The new project contains these folders and files, following the recommended project layout:
 
-| File / Folder    | Purpose |
-| ---------------- | -------------------- |
-| `app/`           | content for UI frontends go here |
-| `approuter/`     | Application Router configuration files |
-| `db/`            | your domain models and data go here |
+| File / Folder    | Purpose                                                                                                   |
+| ---------------- | --------------------------------------------------------------------------------------------------------- |
+| `app/`           | content for UI frontends go here                                                                          |
+| `approuter/`     | Application Router configuration files                                                                    |
+| `db/`            | your domain models and data go here                                                                       |
 | `html5Deployer/` | helper application to deploy HTML5 apps to the HTML5 Application Repository service in SAP Cloud Platform |
-| `srv/`           | your service models and code go here |
-| `package.json`   | project metadata and configuration  |
-| `README.md`      | this getting started guide |
+| `srv/`           | your service models and code go here                                                                      |
+| `package.json`   | project metadata and configuration                                                                        |
+| `README.md`      | this getting started guide                                                                                |
 
 ### Add your business logic
 
@@ -132,6 +130,7 @@ The new project contains these folders and files, following the recommended proj
 ### Deploy the app
 
 Open a terminal in the project root directory and run:
+
 ```sh
 mbt build
 cf deploy mta_archives/yourAppMtarArchiveName.mtar
@@ -148,7 +147,9 @@ Learn more about localhost development on: [Localhost Development][localhost-dev
 Learn more about manual configuration on: [Manual Configuration][step-by-step-documentation]
 
 <!-- ROADMAP -->
+
 ## Roadmap
+
 These are some of our backlog items
 
 - Add UI5 app via setup script and document it
@@ -157,8 +158,8 @@ These are some of our backlog items
 
 See the [open issues](https://github.com/Turutupa/cf-create-app/issues) for a list of proposed features (and known issues).
 
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -169,14 +170,14 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License.
 
-
 <!-- CONTACT -->
+
 ## Contact
 
 - Alberto Delgado - [![LinkedIn][linkedin-shield]][linkedin-url-alberto]
@@ -185,19 +186,19 @@ Distributed under the MIT License.
 
 Project Link: [https://github.com/Turutupa/cf-create-app](https://github.com/Turutupa/cf-create-app)
 
-
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [Img Shields](https://shields.io)
-* [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 
+## Acknowledgements
+
+- [Img Shields](https://shields.io)
+- [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
 
 <!-- MARKDOWN LINKS & IMAGES -->
+
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url-alberto]: https://www.linkedin.com/in/albertodelgadocabrera/
 [linkedin-url-rafa]: https://www.linkedin.com/in/rafaellopezmartinez/
 [linkedin-url-sergio]: https://www.linkedin.com/in/sergio-delgado-98b66ba0/
-
 [nodejs-documentation]: https://nodejs.org/en/download/package-manager/
 [cds-cli-download]: https://cap.cloud.sap/docs/about/#development-tools
 [mbt-cli-download]: https://sap.github.io/cloud-mta-build-tool/download/
@@ -212,3 +213,4 @@ Project Link: [https://github.com/Turutupa/cf-create-app](https://github.com/Tur
 [xsuaa-documentation]: https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/28eb34a6eda740a395ff6b0496f3bffb.html
 [localhost-dev-documentation]: https://github.com/Turutupa/cf-create-app/blob/master/documents/LocalhostDevelopment.md
 [step-by-step-documentation]: https://github.com/Turutupa/cf-create-app/blob/master/documents/ManualConfig.md
+[UI-framework-command-prompt]: https://i.imgur.com/fo6K4TV.jpg
