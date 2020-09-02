@@ -7,6 +7,6 @@ namespace my.db.namespace;
  * More about Domain Modeling in the CAP Documentation: https://cap.cloud.sap/docs/guides/domain-models
  */
  
-entity FooEntity : cuid {
+entity Foo : cuid {
 
 }
