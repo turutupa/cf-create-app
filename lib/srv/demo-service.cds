@@ -7,6 +7,6 @@ using { my.db.namespace as db } from '../db/schema';
 
 service DemoService {
 
-    entity Foo as projection on db.FooEntity;
+    entity Foo as projection on db.Foo;
 
 }
