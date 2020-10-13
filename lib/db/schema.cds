@@ -1,23 +1,12 @@
-using {managed} from '@sap/cds/common';
+using {cuid} from '@sap/cds/common';
 
-namespace bookshop;
+namespace my.db.namespace;
 
-entity Books : managed {
-  key ID     : Integer;
-      title  : localized String(111);
-      descr  : localized String(1111);
-      author : Association to Authors;
-      stock  : Integer;
-      price  : Decimal(9, 2);
-}
+/*
+ * Use this file to define your models
+ * More about Domain Modeling in the CAP Documentation: https://cap.cloud.sap/docs/guides/domain-models
+ */
+ 
+entity Foo : cuid {
 
-entity Authors : managed {
-  key ID           : Integer;
-      name         : String(111);
-      dateOfBirth  : Date;
-      dateOfDeath  : Date;
-      placeOfBirth : String;
-      placeOfDeath : String;
-      books        : Association to many Books
-                       on books.author = $self;
 }
